@@ -42,6 +42,7 @@ export default{
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
             height: 100%;
         }
 
@@ -49,10 +50,12 @@ export default{
             padding-top: 1rem;
             text-align: center;
             color: white;
+            text-transform: uppercase;
         }
 
         p{
             padding-top: 1rem;
+            font-size: 1.5rem;
         }
             
 }       

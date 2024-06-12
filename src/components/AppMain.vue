@@ -32,7 +32,7 @@ export default{
         delay(){
             setTimeout(() => {
                 this.isLoaded = true;
-            }, 5000);
+            }, 3000);
         }
     },
     created(){

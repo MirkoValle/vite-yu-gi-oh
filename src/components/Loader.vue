@@ -59,7 +59,7 @@ section{
   border-radius: 7px;
   background: rgb(255, 255, 255);
   transition: 0.5s;
-  animation: loading_44 10s cubic-bezier(.4,1.01,1,1) infinite;
+  animation: loading_44 6s cubic-bezier(.4,1.01,1,1) infinite;
 }
 
 @keyframes loading_44 {
