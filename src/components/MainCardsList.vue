@@ -6,6 +6,12 @@ export default{
             
         }
     },
+    props:{
+        cards: {
+            type: Array,
+            required: true
+        }
+    },
     components:{
         MainSingleCard,
     }
@@ -13,9 +19,16 @@ export default{
 </script>
 
 <template>
-    <MainSingleCard/>
+    <div>
+        <MainSingleCard v-for="card in cards" :key="card.id" :card="card" />
+    </div>
 </template>
 
 <style scoped>
-
+div{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 5rem;      
+}
 </style>
