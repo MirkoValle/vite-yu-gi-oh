@@ -1,15 +1,18 @@
 <script>
 import MainCardsList from './MainCardsList.vue';
+import Loader from './Loader.vue';
 import axios from "axios";
 import { store } from '../store.js'
 export default{
     data() {
         return{
             store,
+            isLoaded: false,
         }
     },
     components: {
         MainCardsList,
+        Loader,
     },
     methods: {
         getCards(){
@@ -25,17 +28,24 @@ export default{
                 .finally(function () {
                     // always executed
                 });
+        },
+        delay(){
+            setTimeout(() => {
+                this.isLoaded = true;
+            }, 5000);
         }
     },
     created(){
         this.getCards();
+        this.delay();
     }
 }
 </script>
 
 <template>
     <main>
-        <MainCardsList/>
+        <MainCardsList v-if="isLoaded == true"/>
+        <Loader v-else />
     </main>
 </template>
 
@@ -44,5 +54,6 @@ export default{
 main{
     background-color: #d48f38;
     padding: 5rem;
+    min-height: 100vh; 
 }
 </style>

@@ -24,6 +24,6 @@ div{
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    padding: 5rem;      
+    padding: 5rem;     
 }
 </style>
