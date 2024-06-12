@@ -1,19 +1,19 @@
 <script>
-import MainCardsList from './MainCardsList.vue';
+import MainSingleCard from './MainSingleCard.vue';
 export default{
     data() {
         return{
             
         }
     },
-    components: {
-        MainCardsList,
+    components:{
+        MainSingleCard,
     }
 }
 </script>
 
 <template>
-    <MainCardsList/>
+    <MainSingleCard/>
 </template>
 
 <style scoped>
