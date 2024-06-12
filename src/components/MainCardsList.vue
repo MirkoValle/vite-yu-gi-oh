@@ -1,15 +1,10 @@
 <script>
 import MainSingleCard from './MainSingleCard.vue';
+import { store } from '../store.js'
 export default{
     data() {
         return{
-            
-        }
-    },
-    props:{
-        cards: {
-            type: Array,
-            required: true
+            store,
         }
     },
     components:{
@@ -20,7 +15,7 @@ export default{
 
 <template>
     <div>
-        <MainSingleCard v-for="card in cards" :key="card.id" :card="card" />
+        <MainSingleCard v-for="card in store.cards" :key="card.id" :card="card" />
     </div>
 </template>
 

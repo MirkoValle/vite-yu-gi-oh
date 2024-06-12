@@ -1,10 +1,11 @@
 <script>
 import MainCardsList from './MainCardsList.vue';
 import axios from "axios";
+import { store } from '../store.js'
 export default{
     data() {
         return{
-            cards : [],
+            store,
         }
     },
     components: {
@@ -15,8 +16,7 @@ export default{
             axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
                 .then( (response) => {
                     // handle success
-                    console.log(response.data.data);
-                    this.cards = response.data.data;
+                    this.store.cards = response.data.data;
                 })
                 .catch(function (error) {
                     // handle error
@@ -35,7 +35,7 @@ export default{
 
 <template>
     <main>
-        <MainCardsList :cards="cards"/>
+        <MainCardsList/>
     </main>
 </template>
 
