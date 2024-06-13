@@ -1,6 +1,7 @@
 <script>
 import MainCardsList from './MainCardsList.vue';
 import Loader from './Loader.vue';
+import DropDown from './DropDown.vue';
 import axios from "axios";
 import { store } from '../store.js'
 export default{
@@ -13,6 +14,7 @@ export default{
     components: {
         MainCardsList,
         Loader,
+        DropDown,
     },
     methods: {
         getCards(){
@@ -32,7 +34,7 @@ export default{
         delay(){
             setTimeout(() => {
                 this.isLoaded = true;
-            }, 3000);
+            }, 10);
         }
     },
     created(){
@@ -44,6 +46,7 @@ export default{
 
 <template>
     <main>
+        <DropDown />
         <MainCardsList v-if="isLoaded == true"/>
         <Loader v-else />
     </main>
