@@ -43,7 +43,7 @@ section{
 }
 
 .progress-loader {
-  top: 28%;
+  top: 30%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

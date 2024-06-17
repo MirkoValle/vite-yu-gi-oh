@@ -31,10 +31,24 @@ export default{
                     // always executed
                 });
         },
+        showArchetype(){
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=' + store.selected)
+                .then( (response) => {
+                    // handle success
+                    this.store.cards = response.data.data;
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .finally(function () {
+                    // always executed
+                });
+        },
         delay(){
             setTimeout(() => {
                 this.isLoaded = true;
-            }, 10);
+            }, 3000);
         }
     },
     created(){
@@ -46,7 +60,7 @@ export default{
 
 <template>
     <main>
-        <DropDown />
+        <DropDown @search="showArchetype"/>
         <MainCardsList v-if="isLoaded == true"/>
         <Loader v-else />
     </main>

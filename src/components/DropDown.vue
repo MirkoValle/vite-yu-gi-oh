@@ -36,7 +36,7 @@ export default{
 
 <template>
     <select name="archetype" id="archetype">
-        <option v-for="(archetype) in store.archetypes" :value="archetype.archetype_name" @click="changeSelected(archetype.archetype_name)">
+        <option v-for="(archetype) in store.archetypes" :value="archetype.archetype_name" @click="changeSelected(archetype.archetype_name); $emit('search')">
             {{ archetype.archetype_name }}
         </option>
     </select>
