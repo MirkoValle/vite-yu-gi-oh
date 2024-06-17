@@ -7,3 +7,12 @@ Per evitare attese e/o rallentamenti nelle richieste, potete diminuire il numero
 https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0
 Bonus:
 Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
+
+
+Creo i componenti necessari per il layout.
+Faccio una chiamata API che mi restituisce tutte le carte e le salvo in un array nello store.
+Mostro le carte ricevute in pagina con le relative informazioni.
+Creo un loader da visualizzare all'inizio come esempio di caricamento.
+
+Creo un dropdown contenente tutti gli archetype disponibili
+Aggiungo una chiamata API che mi restituisce l'archetype selezionato e lo mostro in pagina
