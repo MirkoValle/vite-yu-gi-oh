@@ -70,7 +70,7 @@ export default{
 
 main{
     background-color: #d48f38;
-    padding: 5rem;
+    padding: 2.5rem 5rem 5rem 5rem;
     min-height: 100vh; 
 }
 </style>

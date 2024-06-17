@@ -46,5 +46,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-
+select{
+    margin-bottom: 2.5rem;
+    padding: .5rem;
+}
 </style>
